@@ -59,7 +59,7 @@ while True:
 	print("\n")
 	show_all(player_hand,dealer_hand)	
 	if dealer_hand.value > 21:
-			print("Dealer busts. Player wins")
+		print("Dealer busts. Player wins")
 	elif player_hand.value > 21:
 		print("Player busts. Dealer wins")
 	elif (player_hand.value<=21 and player_hand.value>dealer_hand.value):
