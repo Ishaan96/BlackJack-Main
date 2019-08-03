@@ -1,4 +1,4 @@
-from deck import x
+from deck import values
 
 class Hand():
 
@@ -6,13 +6,18 @@ class Hand():
 		self.hand = []
 		self.value = 0
 
-	def add_card(self):
-		self.hand.append(x.deal())
-		self.value += values[x.rank]
+	def add_card(self,card):
+		self.hand.append(card)
+
+		if(card.rank == 'Ace'):
+			if(self.value+11 > 21):
+				self.value += values['Ace'][0]
+			else:
+				self.value += values['Ace'][1]
+		else:
+			self.value += values[card.rank]
 
 
 	def __str__(self):
-		return 'Testing Hand class'
+		return str(self.value)
 
-x.shuffle()
-print(x)
