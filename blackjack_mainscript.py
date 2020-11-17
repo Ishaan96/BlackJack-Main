@@ -1,7 +1,6 @@
 from deck import Deck
 from hand import Hand
 from deck import suits,ranks,values
-from chips import Chips
 
 playing = True
 
