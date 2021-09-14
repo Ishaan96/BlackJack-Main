@@ -17,13 +17,6 @@ def hit_or_stand(hand):
 			continue
 		break
 
-def ask_bet(total):
-	b = int(input('Enter bet amount:'))
-	while(b>total):
-		b = int(input('Enter bet amount:'))
-
-	return b
-
 def show_some(player,dealer):
 	print("Dealer's Hand:")
 	print(" <card hidden>")
